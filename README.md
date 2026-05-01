@@ -1,8 +1,9 @@
-# 2nd-brain-guide — PARA 기반 second-brain 운영 지침
+# 2nd-brain-vault-guide — PARA 기반 second-brain 운영 지침
 
 Claude Code · Obsidian · Docker 환경에서 [Tiago Forte의 BASB](https://www.buildingasecondbrain.com/) 와 [PARA 방법론](https://fortelabs.com/blog/para/) 으로 개인 지식관리(PKM) 시스템을 운영하기 위한 **공개 지침·템플릿·골격 모음**.
 
 > 이 저장소는 *방법론과 골격* 만 공개합니다. 개인 노트·원본 자료는 포함되지 않습니다.
+> 이 가이드는 [2nd-brain-docker](https://github.com/ai4radmed/2nd-brain-docker) 가 제공하는 컨테이너 환경 (Claude CLI, Gemini CLI, OpenClaw, MCP 서버들) 을 가정합니다.
 
 ---
 
@@ -11,23 +12,23 @@ Claude Code · Obsidian · Docker 환경에서 [Tiago Forte의 BASB](https://www
 | 저장소 | 역할 | 공개 여부 |
 |---|---|---|
 | **[2nd-brain-docker](https://github.com/ai4radmed/2nd-brain-docker)** | 격리 실행환경 (Docker 이미지·compose·Makefile) | 공개 |
-| **2nd-brain-guide** *(이 저장소)* | PARA 운영 지침·워크플로우·빈 vault 골격 | 공개 |
-| **2nd-brain** *(개인)* | 실제 knowledge·sources 데이터 | 비공개 (각자 운영) |
+| **2nd-brain-vault-guide** *(이 저장소)* | PARA 운영 지침·워크플로우·빈 vault 골격 | 공개 |
+| **2nd-brain-vault** *(개인)* | 실제 knowledge·sources 데이터 + 얇은 개인 CLAUDE.md | 비공개 (각자 운영, Syncthing 동기) |
 
 세 저장소는 다음 비유로 이해할 수 있습니다.
 
 - **docker** = 건물(실행환경)을 짓는 도면
-- **guide** = 건물 안에서의 생활 규칙·가구 배치도 *(이 저장소)*
-- **2nd-brain** = 그 건물에서 실제로 살아가는 한 사람의 살림살이
+- **vault-guide** = 건물 안에서의 생활 규칙·가구 배치도 *(이 저장소)*
+- **vault** = 그 건물에서 실제로 살아가는 한 사람의 살림살이
 
-`2nd-brain-docker`로 환경을 띄우고, 본 저장소를 clone 하여 자기 vault의 출발점으로 삼은 뒤, 별도의 **비공개 git 저장소**로 초기화하여 개인 데이터를 채워가는 흐름입니다.
+`2nd-brain-docker` 로 환경을 띄우고, 본 저장소를 별도 위치에 clone 합니다. 자기 vault 는 별도의 **비공개 저장소** (Syncthing 으로 PC 간 동기, 로컬 git 으로 버전관리) 로 운영하며, vault 의 `CLAUDE.md` 는 본 가이드 문서들을 `@`-import 하는 *얇은 layer* 로 둡니다.
 
 ---
 
 ## 저장소 구조
 
 ```
-2nd-brain-guide/
+2nd-brain-vault-guide/
 ├── CLAUDE.md                   권위 문서 — Claude Code 가 자동으로 읽는 운영 매뉴얼
 ├── claude-config/              Claude Desktop / Claude Code 설정 동기화 3계층
 │   ├── platform/               OS별 차이 (Windows / WSL2)
@@ -82,7 +83,7 @@ PARA 4분류(00_inbox · 01_projects · 02_areas · 03_resources · 04_archive)�
 
 ```bash
 # 1. 이 저장소를 clone
-git clone https://github.com/ai4radmed/2nd-brain-guide.git my-second-brain
+git clone https://github.com/ai4radmed/2nd-brain-vault-guide.git my-second-brain
 cd my-second-brain
 
 # 2. git 이력 분리 (자기 비공개 저장소로 다시 시작)
@@ -102,7 +103,7 @@ make build && make rw
 
 ### C. 짝 저장소로 운영 (저자 권장)
 
-`2nd-brain-guide` 를 fork·clone 한 뒤, 짝 비공개 저장소에서 **submodule 또는 sparse-checkout** 로 끌어와 지침은 항상 최신 상태로 유지합니다. 자세한 셋업은 `knowledge/03_resources/setup/second-brain-setup.md` 참조.
+`2nd-brain-vault-guide` 를 별도 위치에 clone 하고, 자기 vault 의 `CLAUDE.md` 가 가이드 문서들을 `@`-import 하는 *얇은 layer* 패턴으로 운영합니다. 가이드는 git 으로 갱신, vault 는 Syncthing 으로 PC 간 동기 + 로컬 git 으로 버전관리 — 두 흐름이 분리되어 가이드는 항상 최신을 유지하고 vault 는 개인 영역으로 남습니다.
 
 ---
 

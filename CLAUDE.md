@@ -1,8 +1,8 @@
-# 2nd-brain-guide — second-brain 운영 지침 (참고용)
+# 2nd-brain-vault-guide — second-brain 운영 지침 (참고용)
 
 이 저장소는 [2nd-brain-docker](https://github.com/ai4radmed/2nd-brain-docker) 컨테이너 환경 안에서 PARA 기반 second-brain 을 운영할 때 참고할 **방법론·장기기억·템플릿** 모음입니다.
 
-> 이 파일은 Claude Code 가 자동으로 읽도록 의도된 *프로젝트 권위 문서* 가 아닙니다 — 가이드 저장소 자체에 대한 안내입니다. 실제 vault 운영 시 자기 데이터 저장소에 별도의 `CLAUDE.md` 를 두세요.
+> 이 파일은 Claude Code 가 자동으로 읽도록 의도된 *프로젝트 권위 문서* 가 아닙니다 — 가이드 저장소 자체에 대한 안내입니다. 실제 vault 운영 시에는 자기 데이터 저장소(`2nd-brain-vault`) 안에 *얇은* `CLAUDE.md` 를 두고, 본 가이드 문서들을 `@`-import 하는 패턴을 권장합니다.
 
 ## 들어 있는 것
 
