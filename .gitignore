@@ -1,0 +1,21 @@
+# Obsidian 개인 작업공간 상태
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# Claude Code 런타임·세션 상태
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+
+# 기기별 설정 (이 공개 저장소엔 들어오면 안 됨)
+claude-config/device/
+
+# OS·에디터
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# 로컬 워크스페이스
+*.code-workspace
