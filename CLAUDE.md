@@ -8,10 +8,11 @@
 
 | 위치 | 내용 |
 |---|---|
-| `knowledge/02_areas/brain-system/README.md` | second-brain 시스템 정의, PARA 4분류, 브레인화, 동반 노트 패턴 |
-| `knowledge/02_areas/brain-system/claude-instruction-layers.md` | Claude Code 지침 7계층과 토큰 예산 가이드 |
+| `methodology/brain-system/README.md` | second-brain 시스템 정의, PARA 4분류, 브레인화, 동반 노트 패턴 |
+| `methodology/brain-system/claude-instruction-layers.md` | Claude Code 지침 7계층과 토큰 예산 가이드 |
 | `claude-config/shared/memory/feedback-*.md` | Claude 협업 시 빠지기 쉬운 함정과 그 대응 (지식 컷오프·과거 판단 존중) |
-| `knowledge/02_areas/인맥/_template.md` | 인물 노트 frontmatter·본문 템플릿 |
+| `templates/notes/인맥/_template.md` | 인물 노트 frontmatter·본문 템플릿 |
+| `templates/vault-skeleton/` | 새 vault 부트스트랩용 빈 PARA 골격 (knowledge/sources 미러) |
 
 ## 아직 들어 있지 않은 것 (의도적, 다음 라운드 예정)
 
