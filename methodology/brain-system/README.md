@@ -138,8 +138,8 @@ sources: <원본 파일 URI>
 ```
 
 `<원본 파일 URI>` 는 운영 환경에 따라 다름:
-- WSL2 native + Obsidian on Windows → `file://wsl.localhost/Ubuntu/home/<user>/projects/2nd-brain/sources/...`
-- 컨테이너 안 → `/workspace/2nd-brain/sources/...`
+- WSL2 native + Obsidian on Windows → `file://wsl.localhost/Ubuntu/home/<user>/projects/2nd-brain-vault/sources/...`
+- 컨테이너 안 또는 WSL2 native 셸 (동일 상대 경로) → `~/projects/2nd-brain-vault/sources/...`
 - vault 상대 경로 (Obsidian 위키링크) → `[[sources/.../파일]]`
 
 ### 파일명 규칙
